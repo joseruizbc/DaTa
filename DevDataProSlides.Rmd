@@ -1,0 +1,40 @@
+---
+title: "DevDatPro"
+author: "Jose"
+date: "15/9/2020"
+output:
+  slidy_presentation: default
+  beamer_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## R Markdown
+
+La presentacion describe el histograma de la velocidad de los carros cambiando la 
+cantidad de divisiones(bins) en los datos.
+
+## Slide with Bullets
+
+Las variables del data frame son:
+
+- Speed
+- dist
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r}
+
+x    <- cars[, 1]
+        bins <- seq(min(x), max(x))
+        hist(x, breaks = bins, col = 'green', border = 'gray')
+```
+
